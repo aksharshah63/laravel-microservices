@@ -11,6 +11,7 @@ Route::prefix('v1')->name('api::v1.')->group(function () {
         Route::post('/logout', [AuthenticationController::class, 'logout'])->name('logout');
     });
     Route::prefix('orders')->group(function () {
+        echo "test";
         Route::get('/', [OrderController::class, 'index'])->name('index');
         Route::post('/', [OrderController::class, 'create'])->name('create');
     });
